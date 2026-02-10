@@ -1,4 +1,4 @@
-package com.rforristall.java.load.balancer.config;
+package com.rforristall.java.load.balancer.backend;
 
 import java.time.Instant;
 import java.util.concurrent.atomic.AtomicBoolean;
