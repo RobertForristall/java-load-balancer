@@ -2,7 +2,7 @@ package com.rforristall.java.load.balancer.strategy;
 
 import java.util.List;
 
-import com.rforristall.java.load.balancer.config.Backend;
+import com.rforristall.java.load.balancer.backend.Backend;
 
 public abstract class AbstractBalancingStrategy implements BalancingStrategy{
   

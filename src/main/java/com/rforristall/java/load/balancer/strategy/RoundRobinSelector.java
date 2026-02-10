@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.rforristall.java.load.balancer.config.Backend;
+import com.rforristall.java.load.balancer.backend.Backend;
 
 public class RoundRobinSelector extends AbstractBalancingStrategy{
   
