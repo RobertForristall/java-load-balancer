@@ -1,0 +1,16 @@
+<Configuration status="info">
+    <Appenders>
+        <Console name="stdout">
+            <PatternLayout pattern="%date{ISO8601} %-5level [%thread] %location - %message%n"/>
+        </Console>
+        <File name="log-file" fileName="logs/output.log">
+            <PatternLayout pattern="%date{ISO8601} %-5level [%thread] %location - %message%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="stdout"/>
+            <AppenderRef ref="log-file"/>
+        </Root>
+    </Loggers>
+</Configuration>
