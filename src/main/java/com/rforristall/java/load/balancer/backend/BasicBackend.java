@@ -7,6 +7,11 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.time.Duration;
 
+/**
+ * Basic backend abstraction that the load balancer can use to forward requests
+ *
+ * @author Robert Forristall (robert.s.forristall@gmail.com)
+ */
 public class BasicBackend extends AbstractBackend{
   
   private static final int MAX_FAILURES = 3;
@@ -39,6 +44,9 @@ public class BasicBackend extends AbstractBackend{
     }
   }
   
+  /**
+   * Helper function for marking a backend as unhealthy if it surpasses its max failure limit
+   */
   private void markUnhealthy() {
     int failures = incrementConsecutiveFailures();
     if (failures >= MAX_FAILURES && isHealthy()) {
